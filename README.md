@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pediatric Wrist Abnormality Detection System
 
 <div align="center">
@@ -92,3 +93,6 @@ For any questions or feedback regarding this project, please feel free to contac
 * Abdul Manaf \
      LinkedIn: https://www.linkedin.com/in/abdul-manaf-6493a3188/ \
      Email: abdulmanafsahito@gmail.com
+=======
+# Disease-Prediction
+>>>>>>> 335ff131564f4afcee646cd55c7899adb3485ac8
