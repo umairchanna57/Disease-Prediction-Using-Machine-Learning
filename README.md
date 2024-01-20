@@ -44,3 +44,13 @@ Flask
 SQLAlchemy
 scikit-learn
 pandas
+
+
+
+
+
+## Contact Info
+For any questions or feedback regarding this project, please feel free to contact the authors:
+* Umair Ali \
+     LinkedIn: https://www.linkedin.com/in/umair-ali-7bb220245/ \
+     Email: Umairchanna57@gmail.com
