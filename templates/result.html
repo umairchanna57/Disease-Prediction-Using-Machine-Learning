@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 200;
+            padding: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin-left: -190px;
+
+
+        }
+
+        .result-container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 700px;
+    max-width: 800px;
+    position: relative;
+    left: 900px; /* Adjust this value as needed */
+}
+
+
+        h1 {
+            color: #333;
+        }
+
+        .positive,
+        .negative,
+        .text-label {
+            font-size: 16px;
+        }
+
+        .positive {
+            color: green;
+        }
+
+        .negative {
+            color: red;
+        }
+
+        .doctor-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card-doctor {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            position: relative;
+            right: 100px;
+
+        }
+
+        .card-doctor img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <p id="predictionResult" class="text-label">The predicted disease: <span id="predictionValue" class="text-label">{{ prediction }}</span></p>
+        <p id="f1Score" class="text-label">F1 Score: <span id="f1ScoreValue" class="text-label">{{ f1_score }}</span></p>
+    </div>
+      
+        <script>
+            // Add JavaScript here if needed
+            const predictionValue = document.getElementById('predictionValue');
+            const prediction = '{{ prediction }}';
+
+            // Modify styles based on prediction result
+            if (prediction.toLowerCase() === 'positive') {
+                predictionValue.classList.add('positive');
+            } else if (prediction.toLowerCase() === 'negative') {
+                predictionValue.classList.add('negative');
+            }
+        </script>
+    </div>
+
+    <div class="doctor-container">
+        <div class="card-doctor">
+            <img src="{{ url_for('static', filename='assets/img/gallery/Rima Sleiman.webp')}}">
+            <p class="text-xl mb-0 text-label">Dr. Rima Sleiman </p>
+            <a href="https://www.ayurmana-uae.com/meet-our-doctors/" class="text-xl mb-0 text-label">Mediclanic UAE</a>
+            <p class="text-xl mb-0 text-label">Physician</p>
+  
+</p>
+        </div>
+
+        <div class="card-doctor">
+            <img src="{{ url_for('static', filename='assets/img/gallery/do.jpg')}}" alt="Dr. Emily Johnson">
+            <p class="text-xl mb-0 text-label">Dr. Ayurmana </p>
+            <a href="https://www.ayurmana-uae.com/meet-our-doctors/" class="text-xl mb-0 text-label">Head of the Dermatology Department</a>
+</p>
+            
+            <span class="text-sm text-grey text-label">Stroke </span>
+
+        </div>
+
+        <div class="card-doctor">
+            <img src="{{ url_for('static', filename='assets/img/gallery/d.jpg')}}" alt="Dr. Michael Davis">
+            <p class="text-xl mb-0 text-label">Dr. Majd El Deen Douba</p>
+           
+            <a href="https://saudigerman.com/doctors/majd-el-deen-douba/" class="text-xl mb-0 text-label">Head of the Dermatology Department</a>
+            <br>
+            <br>
+            <span class="text-sm text-grey text-label">Dermatology</span>
+        </div>
+
+
+
+        <div class="doctor-container">
+            <div class="card-doctor">
+                <img src="{{ url_for('static', filename='assets/img/gallery/doc.jpg')}}" alt="Dr. John Smith">
+                <p class="text-xl mb-0 text-label">Dr. Anwar Dandashli</p>
+
+                 <a href="https://www.ayurmana-uae.com/meet-our-doctors/" class="text-xl mb-0 text-label">  Trusted Skincare in Dubai  UAE</a>
+                 <br>
+                 <br>
+                 <span class="text-sm text-grey text-label">Eczema</span>
+              
+                </p>
+            </div>
+
+
+            <div class="doctor-container">
+                <div class="card-doctor">
+                    <img src="{{ url_for('static', filename='assets/img/gallery/Reem-AlKassem_1-1.webp')}}" alt="Dr. John Smith">
+                    <p class="text-xl mb-0 text-label">Dr. Reem Alkassem </p>
+                   
+                    <a href="https://www.ayurmana-uae.com/meet-our-doctors/" class="text-xl mb-0 text-label">Mediclanic UAE Hospital Trusted</a>
+                      <br>
+                      <br>
+                    <span class="text-sm text-grey text-label">Neurologist</span>                </p>
+                </div>
+            
+    </div>
+</body>
+
+</html>

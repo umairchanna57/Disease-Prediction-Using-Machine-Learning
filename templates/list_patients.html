@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Patients</title>
+
+    <!-- Add your CSS styles here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <!-- Add your JavaScript code here if needed -->
+    <script>
+        // Your JavaScript code goes here
+        // For example, you can add interactivity to the table
+        // (e.g., highlighting rows on hover)
+        document.addEventListener('DOMContentLoaded', function () {
+            var rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(function (row) {
+                row.addEventListener('mouseover', function () {
+                    this.style.backgroundColor = '#e0e0e0';
+                });
+
+                row.addEventListener('mouseout', function () {
+                    this.style.backgroundColor = '';
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <section id="list-patients" class="list-patients">
+        <div class="container">
+            <div class="section-title">
+                <h2>List Patients</h2>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Profession</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for patient in patients %}
+                    <tr>
+                        <td>{{ patient.patient_id }}</td>
+                        <td>{{ patient.first_name }}</td>
+                        <td>{{ patient.last_name }}</td>
+                        <td>{{ patient.email }}</td>
+                        <td>{{ patient.profession }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+
+</html>

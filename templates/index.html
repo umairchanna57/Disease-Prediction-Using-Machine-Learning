@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Disease Detection</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link
+      href="{{ url_for('static', filename='assets/img/favicon.png')}}"
+      rel="icon"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/img/apple-touch-icon.png')}}"
+      rel="apple-touch-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="{{ url_for('static', filename='assets/vendor/fontawesome-free/css/all.min.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/animate.css/animate.min.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/aos/aos.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link
+      href="{{ url_for('static', filename='assets/css/style.css')}}"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+        <a href="/" class="logo me-auto"
+          ><img
+            src="{{ url_for('static', filename='assets/img/logo.png')}}"
+            alt=""
+        /></a>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto" href="/">Home</a></li>
+
+              
+          <li class="nav-item"><a class="nav-link scrollto" href="/add_patient">Add Patient</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            
+               <!-- Link to the add_patient route -->
+   <!-- Other navbar items -->
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+           </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+
+        <a href="#appointment" class="appointment-btn scrollto"
+          ><span class="d-none d-md-inline">DIAGNOSE Disease </span></a
+        >
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div
+        id="heroCarousel"
+        data-bs-interval="5000"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide 1 -->
+          
+          <div class="carousel-item active" style="background-image: url('/static/assets/img/slide/slide-1.jpg')">
+
+            <div class="container">
+              <h2>
+                Welcome to
+                <span>Disease symptoms and patient profile </span>
+              </h2>
+              <p>
+                Disease symptoms and patient profiles provide insights into the diverse manifestations of various conditions, 
+                such as the "Asthma Twins" phenomenon and the rarity of the Common Cold.
+
+              </p>
+              <a href="#about" class="btn-get-started scrollto">Read More</a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+
+          <div class="carousel-item active" style="background-image: url('/static/assets/img/slide/slide-2.jpg')">
+
+            <div class="container">
+              <h2>Did You Know?</h2>
+              <p>
+                Eczema cases often coincide with high cholesterol levels, suggesting 
+                a potential link between the skin condition and cholesterol.
+              </p>
+              <a href="#about" class="btn-get-started scrollto">Read More</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item active" style="background-image: url('/static/assets/img/slide/slide-2.jpg')">
+
+            <div class="container">
+              <h2>Fun Fact</h2>
+              <p>
+                
+                "Asthma Twins" with the same symptoms, highlighting the diversity of disease outcomes. Additionally,
+                 the Common Cold appears only once, challenging its reputation as a common ailment in medical records
+              </p>
+              <a href="#about" class="btn-get-started scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="carousel-control-prev"
+          href="#heroCarousel"
+          role="button"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon bi bi-chevron-left"
+            aria-hidden="true"
+          ></span>
+        </a>
+
+        <a
+          class="carousel-control-next"
+          href="#heroCarousel"
+          role="button"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon bi bi-chevron-right"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= Featured Services Section ======= -->
+      <section id="featured-services" class="featured-services">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+            >
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="fa-solid fa-robot"></i></div>
+                <h4 class="title">
+                  <a href="">Disease</a>
+                </h4>
+                <p class="description">
+                  To detect the Disease Positive OR negative
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+            >
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon"><i class="fas fa-pills"></i></div>
+                <h4 class="title"><a href="">Machine Learning Technologies</a></h4>
+                <p class="description">
+                  Decision tree and support vector machine
+                   (SVM) algorithms to analyze the dataset and predict disease outcomes.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+            >
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon"><i class="fas fa-thermometer"></i></div>
+                <h4 class="title"><a href="">Data</a></h4>
+                <p class="description">
+                  Tabuler Data with Features :Disease	Fever	Cough	Fatigue	Difficulty Breathing	Age	Gender	Blood Pressure	Cholesterol Level
+ 
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+            >
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon"><i class="fas fa-dna"></i></div>
+                <h4 class="title"><a href="">Improved Patient Care</a></h4>
+                <p class="description">
+                 To detect the early disease patient can be heal immidietly 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Featured Services Section -->
+
+
+      <!-- ======= About Us Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>About Us</h2>
+           
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <img
+                src="{{ url_for('static', filename='assets/img/about.jpg')}}"
+                class="img-fluid"
+                alt=""
+                style="height: 610px;"
+
+              />
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3></h3>
+              <p class="fst-italic">
+                AUE's Vision and Mission 
+              The American University in the Emirates (AUE) is dedicated to be one 
+              of the leading higher educational institutions locally and regionally, providing an integrated pathway for students to become creative, effective, and productive members of the community.
+            
+            The American University in the Emirates is a coeducational undergraduate and graduate degree-granting institution committed to preparing students as global citizens for future career aspirations
+ and lifelong learning through quality teaching, research, and service opportunities.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle"></i> Research Excellence American University in the Emirates (AUE)
+                  received the 2018 3G Research Excellence Award, recognized for its significant impact
+                   in research and development alongside 25 exceptional individuals and organizations 
+                  from 15 countries at the Global Good Governance Awards.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Global Recognition:  American University in the Emirates (AUE) has
+                   consistently secured a place among the  nited Arab Emirates University is one of the top public universities in Al Ain, United Arab Emirates.
+                   It is ranked #290 in QS World University Rankings 2024.
+                  
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Program Goals
+                  Have a graduate degree or professional career in computer science or related disciplines.
+                  Become successful researchers, team members or leaders.
+                  Maintain high standards of work ethics, social responsibilities and professionalism.
+                  Specialize in solving technical problems using computing knowledge, skills and competence.
+                  Be creative, effective, and productive members of the local, regional and
+                  international communities.
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Us Section -->
+      <!-- ======= Counts Section ======= -->
+      <section id="counts" class="counts">
+        <div class="container" data-aos="fade-up">
+          <div class="row no-gutters">
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="fas fa-user-md"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="85"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+
+                <p>
+                  <strong>Visits:</strong>Number of times you as a physician or
+                  a user have visited this website.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="far fa-hospital"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="715000"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>Hospital Deaths:</strong> 715,000 people die each year
+                  in the hospital.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="fas fa-flask"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="500"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>Research:</strong> There were over 500 academic papers
+                  published on AI in medicine in 2023.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="fas fa-award"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="150"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>Industry:</strong> According to a report by Frost &
+                  Sullivan, AI is expected to save the healthcare industry $150
+                  billion annually by 2026.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Counts Section -->
+
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services services">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Services</h2>
+          </div>
+
+          <div class="row">
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4 class="title"><a href="">Disease Detection</a></h4>
+              <p class="description">
+                detect patterns and relationships between disease symptoms,
+                 patient profiles, and the ultimate disease outcomes, enabling us to make predictions
+                 and gain insights into the factors influencing health conditions
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4 class="title"><a href="">User Friendly</a></h4>
+              <p class="description">
+                The website offers user-friendly interface and functionalities.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4 class="title"><a href="">Educational Resources</a></h4>
+              <p class="description">
+                The website can offer educational resources to help doctors and
+                caregivers understand detect, including
+                information on diagnosis, treatment, and prevention.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Services Section -->
+
+      
+      <!-- ======= Appointment Section ======= -->
+      
+      <section id="appointment" class="appointment section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>DIAGNOSE  THE DISEASE</h2>
+            <p>
+              Users can easily Disease	Fever	Cough	Fatigue	Difficulty Breathing	Age	Gender	Blood Pressure	Cholesterol Level
+               and receive clear
+              results highlighting any disease detection. 
+          </div>
+
+
+
+          <form
+    action="/predict"
+    method="post"
+    enctype="multipart/form-data"
+    class="php-email-form"
+    id="form-for-prediction"
+>
+    <div class="row">
+        <!-- <div class="col-md-4 form-group">
+            <input
+                type="text"
+                name="Disease_Type"
+                class="form-control"
+                id="disease_type"
+                placeholder="Disease Type"
+                required
+            />
+        </div> -->
+
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+            <select name="Fever" class="form-select">
+                <option value="">Fever</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+            <select name="Cough" class="form-select">
+                <option value="">Cough</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+            <select name="Fatigue" class="form-select">
+                <option value="">Fatigue</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+            <select name="Difficulty_Breathing" class="form-select">
+                <option value="">Difficulty Breathing</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+            <select name="Blood_Pressure" class="form-select">
+                <option value="">Blood Pressure</option>
+                <option value="Normal">Normal</option>
+                <option value="Low">Low</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+            <select name="Gender" class="form-select">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+            <input
+                type="number"
+                class="form-control"
+                name="Age"
+                id="age"
+                placeholder="Your Age"
+                required
+            />
+        </div>
+
+        <div class="col-md-4 form-group mt-3 mt-md-0">
+            <select name="Cholesterol_Level" class="form-select">
+                <option value="">Cholesterol Level</option>
+                <option value="Low">Low</option>
+                <option value="High">High</option>
+                <option value="Normal">Normal</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <button type="submit">Make a Prediction</button>
+    </div>
+</form>
+        </div>
+      </section>
+      <!-- End Appointment Section -->
+
+
+      <!-- ======= Gallery Section ======= -->
+      <section id="gallery" class="gallery">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Gallery</h2>
+            <p>
+              Dental imaging, too, has harnessed the capabilities of AI, resulting in 
+              enhanced image quality and minimized radiation exposure for pediatric 
+              patients, ensuring safer and more efficient diagnostic procedures.
+            </p>
+          </div>
+
+          <div class="gallery-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <a
+                  class="gallery-lightbox"
+                  href="{{ url_for('static', filename='assets/img/gallery/gallery-1.jpg')}}"
+                  ><img
+                    src="{{ url_for('static', filename='assets/img/gallery/gallery-1.jpg')}}"
+                    class="img-fluid"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="gallery-lightbox"
+                  href="{{ url_for('static', filename='assets/img/gallery/gallery-2.jpg')}}"
+                  ><img
+                    src="{{ url_for('static', filename='assets/img/gallery/gallery-2.jpg')}}"
+                    class="img-fluid"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="gallery-lightbox"
+                  href="{{ url_for('static', filename='assets/img/gallery/gallery-3.jpg')}}"
+                  ><img
+                    src="{{ url_for('static', filename='assets/img/gallery/gallery-3.jpg')}}"
+                    class="img-fluid"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="gallery-lightbox"
+                  href="{{ url_for('static', filename='assets/img/gallery/gallery-4.jpg')}}"
+                  ><img
+                    src="{{ url_for('static', filename='assets/img/gallery/gallery-4.jpg')}}"
+                    class="img-fluid"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="gallery-lightbox"
+                  href="{{ url_for('static', filename='assets/img/gallery/gallery-5.jpg')}}"
+                  ><img
+                    src="{{ url_for('static', filename='assets/img/gallery/gallery-5.jpg')}}"
+                    class="img-fluid"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="gallery-lightbox"
+                  href="{{ url_for('static', filename='assets/img/gallery/gallery-6.jpg')}}"
+                  ><img
+                    src="{{ url_for('static', filename='assets/img/gallery/gallery-6.jpg')}}"
+                    class="img-fluid"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="gallery-lightbox"
+                  href="{{ url_for('static', filename='assets/img/gallery/gallery-7.jpg')}}"
+                  ><img
+                    src="{{ url_for('static', filename='assets/img/gallery/gallery-7.jpg')}}"
+                    class="img-fluid"
+                    alt=""
+                /></a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  class="gallery-lightbox"
+                  href="{{ url_for('static', filename='assets/img/gallery/gallery-8.jpg')}}"
+                  ><img
+                    src="{{ url_for('static', filename='assets/img/gallery/gallery-8.jpg')}}"
+                    class="img-fluid"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Gallery Section -->
+
+      <!-- ======= Frequently Asked Questioins Section ======= -->
+      <section id="faq" class="faq section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Frequently Asked Questioins</h2>
+            <p>
+              This description delves into the methodology employed for the development of a 
+              disease detection system, highlighting the utilization of cutting-edge machine
+               learning  techniques. Furthermore, it underscores the substantial efforts 
+               invested in refining the system's accuracy, 
+              achieved through meticulous preprocessing and image augmentation strategies.
+            </p>
+          </div>
+
+          <ul class="faq-list">
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                class="collapsed question"
+                href="#faq1"
+              >
+              What is the purpose of this project?
+                <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The purpose of this project is to analyze a dataset containing 
+                  information about various diseases, symptoms, patient profiles, and 
+                  other variables. It aims to gain insights into disease outcomes,
+                   explore patterns, and potentially predict outcomes based on the provided data.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq2"
+                class="collapsed question"
+              >
+              How can the dataset be used to gain insights into disease outcomes?
+              <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The dataset serves as a valuable resource for understanding 
+                  the relationships between disease symptoms, patient profiles, 
+                  and disease outcomes. By applying data analysis techniques, 
+                  we can uncover correlations, trends, and factors 
+                  that contribute to different disease outcomes..
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq3"
+                class="collapsed question"
+              >
+              What algorithms are employed for data analysis in this project?
+               <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  In this project, we utilize decision tree and support vector machine (SVM)
+                   algorithms for data analysis. These algorithms help in 
+                  identifying patterns and making predictions based on the dataset's information
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq4"
+                class="collapsed question"
+              >
+              Can this project predict disease outcomes accurately?
+                <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  While the project aims to predict disease outcomes,
+                   accuracy depends on the complexity of the dataset and the effectiveness of the chosen algorithms. 
+                  The accuracy level will be assessed during the project's evaluation phase
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq5"
+                class="collapsed question"
+              >
+              What are the key findings or insights derived from the dataset?
+               <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The project has revealed several key insights,
+                   such as the presence of "Asthma Twins" with identical 
+                   symptoms but different outcomes, the infrequent appearance of the Common Cold in medical records, and a potential link between Eczema and high cholesterol levels. These findings offer 
+                  valuable information about disease patterns and occurrences in the dataset.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- End Frequently Asked Questioins Section -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Contact</h2>
+            <p>You can easily contact with us through below information</p>
+          </div>
+        </div>
+
+        <div>
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3681658915716!2d55.40800487443903!3d25.123240934693957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f638ef4d3444b%3A0xad4c9fff686c0e22!2sAmerican%20University%20in%20the%20Emirates!5e0!3m2!1sen!2s!4v1699021425109!5m2!1sen!2s" width="2000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="info-box">
+                    <i class="bx bx-map"></i>
+                    <h3>Our Address</h3>
+                    <p>American University in the Emirates</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box mt-4">
+                    <i class="bx bx-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>
+                      211120025@aue.ae <br />211110059@aue.ae<br />191130003@aue.ae<br />
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box mt-4">
+                    <i class="bx bx-phone-call"></i>
+                    <h3>Call Us</h3>
+                    <p>+92 309  <br />+92 312 <br />+92 323  <br /> </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <form
+                action="https://formspree.io/f/mnqyrbyn"
+                method="POST"
+                role="form"
+                class="php-email-form"
+              >
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="Your Email"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                    required=""
+                  />
+                </div>
+                <div class="form-group mt-3">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="7"
+                    placeholder="Message"
+                    required=""
+                  ></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="bg-dark text-light text-center py-3">
+      <p>Copyright &copy; AUE</p>
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/upload-image.js')}}"></script>
+  </body>
+
+  <script>
+    let visitCount = parseInt(localStorage.getItem("visitCount")) || 0;
+
+    visitCount++;
+    localStorage.setItem("visitCount", visitCount);
+
+    document
+      .querySelector(".purecounter")
+      .setAttribute("data-purecounter-end", visitCount);
+  </script>
+</html>
