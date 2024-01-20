@@ -7,7 +7,6 @@
 
 ## Introduction
 
-Certainly! Here's an introduction you can use for your GitHub README file:
 
 ## Disease Prediction Web Application
 Overview
